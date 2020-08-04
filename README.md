@@ -1,7 +1,6 @@
 # Exploradome_tangram
 Tangram form detection from live video stream
 
-
 ## Table Of Contents
 -  [Installation and Usage](#Installation-and-Usage)
 -  [Usage](#Usage)
@@ -20,13 +19,13 @@ pip install opencv-python tensorflow
 
 ## Approach taken
 
-Find the best accuracy for the model (CNN with Tensorflow) - see the Google Sheet
+Find the best accuracy with transfert learning model (CNN with Tensorflow) - see the Google Sheet
 
 ## In progress
 
 Tested so far:
 * MobileNet
-* InceptionV3
+* InceptionV3 + L2
 
 ## Results or improvement strategy
 
@@ -37,11 +36,11 @@ see the Google Sheet: https://docs.google.com/spreadsheets/d/1_P0LEN9CyY8Zfk653I
 ## In Details
 ```
 ├──  data  
-│    └── data  - here's the image classification datasets (from video_to_img).
-│    └── train - here's the file to train dataset.
-│    └── validation  		 - here's the file to validation dataset.
-│    └── video_to_img    - here's the file of raw image extraction of video file.
-│    └── WIN_20200727_16_30_12_Pro.mp4    - here's the tangram video for the creation of the datasets.
+│    └── train_full  - here's the image classification datasets for the train and validation with all images (unbalanced).
+│    └── train_balanced - here's the image classification datasets for the train and validation with 140 images for each categories (balanced).
+│    └── test_full  		- here's the image classification datasets for the test with all images (unbalanced).
+│    └── test_balanced  - here's the image classification datasets for the test with 28 images for each categories (balanced) - 20% of train_balanced dataset.
+│   
 │
 │
 ├──  modules        - this file contains the modules.
